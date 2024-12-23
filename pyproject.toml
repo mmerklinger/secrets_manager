@@ -1,0 +1,17 @@
+[project]
+name = "secrets-manager"
+version = "0.1.0"
+description = "Implementations of secret managers with traditional cryptographic library and Trusted Platform Module (TPM)."
+authors = [
+    { name = "Markus Merklinger", email = "markus.merklinger@code.berlin" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+secrets-manager = "secrets_manager.__main__:main"
+secrets-manager-tpm = "secrets_manager_tpm.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
