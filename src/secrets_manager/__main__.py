@@ -1,5 +1,8 @@
+from secrets_manager.cli import cli
+
+
 def main() -> None:
-    pass
+    cli()
 
 
 if __name__ == "__main__":
