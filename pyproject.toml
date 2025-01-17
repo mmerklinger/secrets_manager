@@ -6,7 +6,10 @@ authors = [
     { name = "Markus Merklinger", email = "markus.merklinger@code.berlin" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+  "click>=8.1.8",
+  "cryptography>=44.0.0",
+]
 
 [dependency-groups]
 dev = [

@@ -44,3 +44,6 @@ dmypy.json
 
 # ruff
 .ruff_cache/
+
+# application database files
+*.db
