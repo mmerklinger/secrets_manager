@@ -9,6 +9,7 @@ requires-python = ">=3.13"
 dependencies = [
   "click>=8.1.8",
   "cryptography>=44.0.0",
+  "tpm2-pytss>=2.3.0",
 ]
 
 [dependency-groups]
@@ -24,3 +25,7 @@ secrets-manager-tpm = "secrets_manager_tpm.__main__:main"
 [build-system]
 requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
+
+[[tool.mypy.overrides]]
+module = "tpm2_pytss.*"
+ignore_missing_imports = true

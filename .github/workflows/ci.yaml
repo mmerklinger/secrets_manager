@@ -14,7 +14,12 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v5
       - name: Sync venv
-        run: uv sync --group=dev
+        run: |
+          apt update && apt install -y \
+            gcc \
+            libtss2-dev \
+            pkgconf
+          uv sync --group=dev
       - name: Run format check
         run: uv run ruff format --check
   check-lint:
@@ -26,7 +31,12 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v5
       - name: Sync venv
-        run: uv sync --group=dev
+        run: |
+          apt update && apt install -y \
+            gcc \
+            libtss2-dev \
+            pkgconf
+          uv sync --group=dev
       - name: Run lint check
         run: uv run ruff check --no-fix
   check-typing:
@@ -38,6 +48,11 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v5
       - name: Sync venv
-        run: uv sync --group=dev
+        run: |
+          apt update && apt install -y \
+            gcc \
+            libtss2-dev \
+            pkgconf
+          uv sync --group=dev
       - name: Run type check
         run: uv run mypy src/
